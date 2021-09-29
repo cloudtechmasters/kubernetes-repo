@@ -23,7 +23,7 @@
                    --nodes-max=4 \
                    --node-volume-size=10 \
                    --ssh-access \
-                   --ssh-public-key=Naresh-california \
+                   --ssh-public-key=vamsi-devops \
                    --managed \
                    --asg-access \
                    --external-dns-access \
