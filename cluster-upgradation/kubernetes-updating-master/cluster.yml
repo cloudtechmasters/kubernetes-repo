@@ -16,7 +16,7 @@ managedNodeGroups:
     volumeSize: 10
     ssh:
       allow: true
-      publicKeyName: naresh
+      publicKeyName: devops-session
     labels: {role: worker}
     tags:
       nodegroup-role: worker
