@@ -8,9 +8,9 @@
     - Create Hosted Zone with our Domain Name
     - External DNS Setup
 # EKS Cluster Setup:
-  [EKS Cluster Setup](https://github.com/Naresh240/eks-cluster-setup/blob/main/README.md)
+  [EKS Cluster Setup](https://github.com/cloudtechmasters/eks-cluster-setup/blob/main/README.md)
 # ALB Ingress Controller Setup:
-  [ALB Ingress Controller](https://github.com/Naresh240/ALB-Ingress-Controller-Setup/blob/main/README.md)
+  [ALB Ingress Controller](https://github.com/cloudtechmasters/ALB-Ingress-Controller-Setup/blob/main/README.md)
 # Create Hosted Zone with our Domain Name
 ![image](https://user-images.githubusercontent.com/58024415/94990966-7e2fd380-059d-11eb-8285-a82353f38c1a.png)
 # Request a Cerficate using Certificate Manager
@@ -27,16 +27,16 @@
     yum install docker -y
     service docker start
 # Clone code from github:
-    git clone https://github.com/Naresh240/RollingUpdate-Rollback-NodejsApp
+    git clone https://github.com/cloudtechmasters/RollingUpdate-Rollback-NodejsApp
     cd RollingUpdate-Rollback-NodejsApp
 # Build Maven Artifact:
     npm install
 # Build Docker image for Springboot Application
-    docker build -t naresh240/nodejs-k8s:v1 .
+    docker build -t cloudtechmasters/nodejs-k8s:v1 .
 # Docker login
     docker login
 # Push docker image to dockerhub
-    docker push naresh240/nodejs-k8s:v1
+    docker push cloudtechmasters/nodejs-k8s:v1
 # Deploy nodejs Application using below commands:
     kubectl apply -f deployment.yml
     kubectl apply -f service.yml
@@ -54,7 +54,7 @@
 # Upgrading for nodejs Application:
 Edit our our application and Build docker image with new tag:
     
-    docker build -t naresh240/nodejs-k8s:v2 .
+    docker build -t cloudtechmasters/nodejs-k8s:v2 .
 
 Push Docker image to docker hub with tag v2:
 
@@ -70,7 +70,7 @@ Check rollout history for revision "1"
     
 Upgrade new image using below command
     
-    kubectl set image deployment nodejs-deployment nodejs-deployment=naresh240/nodejs-k8s:v2
+    kubectl set image deployment nodejs-deployment nodejs-deployment=cloudtechmasters/nodejs-k8s:v2
     
 # Goto Web UI and check updated version output
 ![image](https://user-images.githubusercontent.com/58024415/95006858-854ef400-0626-11eb-8250-9a5d4a559e11.png)
